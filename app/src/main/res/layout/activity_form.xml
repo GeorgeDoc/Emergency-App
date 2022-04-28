@@ -1,0 +1,144 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context=".Form">
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical">
+
+            <TextView
+                android:id="@+id/textView8"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:layout_marginTop="20dp"
+                android:text="Emergency Form"
+                android:textSize="20dp"
+                android:textStyle="bold" />
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="270dp"
+                android:padding="10dp">
+
+                <TextView
+                    android:id="@+id/tvLocation"
+                    android:layout_width="117dp"
+                    android:layout_height="90dp"
+                    android:layout_marginLeft="20dp"
+                    android:padding="20dp"
+                    android:text="Emernency type"></TextView>
+
+                <Button
+                    android:id="@+id/form_button"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentStart="true"
+                    android:layout_alignParentTop="true"
+                    android:layout_gravity="center"
+                    android:layout_marginStart="200dp"
+                    android:layout_marginTop="70dp"
+                    android:paddingHorizontal="30dp"
+                    android:text="get location"></Button>
+
+                <EditText
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentTop="true"
+                    android:layout_centerHorizontal="true"
+                    android:layout_marginTop="140dp"
+                    android:hint="Σχόλια/ Επιπλέον πληροφορίες"
+                    android:textSize="14dp"></EditText>
+
+                <LinearLayout
+                    android:id="@+id/linear_files"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentBottom="true"
+                    android:layout_centerHorizontal="true"
+                    android:orientation="horizontal"
+                    android:paddingHorizontal="10dp">
+
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginHorizontal="10dp"
+                        android:text="Επισυνάψτε ένα αρχείο:"
+                        android:textSize="14dp"></TextView>
+
+                    <Button
+                        android:layout_width="60dp"
+                        android:layout_height="62dp"
+                        android:layout_marginLeft="15dp"
+                        android:background="@drawable/round_button"
+                        app:icon="@android:drawable/ic_menu_camera"></Button>
+
+                    <Button
+                        android:layout_width="62dp"
+                        android:layout_height="62dp"
+                        android:layout_marginLeft="20dp"
+                        android:background="@drawable/round_button"
+                        app:icon="?android:attr/listChoiceIndicatorSingle"></Button>
+                </LinearLayout>
+            </RelativeLayout>
+
+            <fragment
+                android:id="@+id/fragment_Map"
+                android:name="com.google.android.gms.maps.SupportMapFragment"
+                android:layout_width="match_parent"
+                android:layout_height="350dp"
+                android:layout_weight="1"
+                tools:context=".MapsFragment" />
+            <!--   android:name="com.example.emergencyapp.MapsFragment"    -->
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:paddingHorizontal="10dp">
+
+                <Button
+                    style="@style/Widget.MaterialComponents.Button.OutlinedButton.Icon"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="10dp"
+                    android:layout_marginTop="10dp"
+                    android:text="back"
+                    app:icon="@android:drawable/arrow_up_float"
+                    app:strokeColor="@color/purple_500"
+                    app:strokeWidth="3dp"></Button>
+
+                <Button
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="10dp"
+                    android:layout_marginTop="10dp"
+                    android:background="@drawable/button_oval"
+                    android:text="πισω"
+                    app:strokeColor="@color/purple_500"></Button>
+
+                <Button
+                    android:layout_width="120dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="10dp"
+                    android:layout_marginTop="10dp"
+                    android:layout_weight="1"
+                    android:background="@drawable/button_oval"
+                    android:text="επομενο"
+                    app:strokeColor="@color/purple_500"></Button>
+            </LinearLayout>
+        </LinearLayout>
+    </ScrollView>
+ </LinearLayout>
